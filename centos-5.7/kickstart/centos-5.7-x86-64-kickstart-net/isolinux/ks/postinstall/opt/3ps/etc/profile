@@ -1,0 +1,17 @@
+#vi command line
+set -o vi
+
+#Postgres
+POSTGRES_HOME=/var/lib/pgsql/9.1; export POSTGRES_HOME
+POSTGRES_BIN=/usr/pgsql-9.1/bin; export POSTGRES_BIN
+
+#Java
+JAVA_HOME=/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64; export JAVA_HOME
+#Maven
+MAVEN_HOME=/opt/3ps/app/apache-maven-2.2.1; export MAVEN_HOME
+
+#Pick up software from /opt/3ps first.
+PATH=/opt/3ps/bin:$POSTGRES_BIN:$MAVEN_HOME/bin:$JAVA_HOME/bin:$PATH; export PATH
+
+#Modify man path
+MANPATH=/opt/3ps/share/man:$MANPATH; export MANPATH

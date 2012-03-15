@@ -1,0 +1,4 @@
+See https://30and30.atlassian.net/wiki/display/30and30/yum for more details.
+To create yum repo copy rpms into this directory and then from ../ execute the following command:
+
+createrepo -g comps.xml repo

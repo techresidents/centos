@@ -1,0 +1,9 @@
+#Source 3ps profile
+. /opt/3ps/etc/profile
+
+#Increase history size
+HISTSIZE=1000; export HISTSIZE
+
+#PIP_DOWNLOAD_CACHE to cache install files
+PIP_DOWNLOAD_CACHE=~/.pip_downloads; export PIP_DOWNLOAD_CACHE
+[ ! -d $PIP_DOWNLOAD_CACHE ] && mkdir -p $PIP_DOWNLOAD_CACHE

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE newcomps PUBLIC "-//CentOS//DTD Comps info//EN" "comps.dtd">
+<comps>
+  <group>
+   <id>30and30</id>
+   <default>true</default>
+   <uservisible>true</uservisible>
+   <name>30and30</name>
+   <description>30and30 Packages</description>
+    <packagelist>
+      <packagereq type="default">python27</packagereq>
+      <packagereq type="default">python27-devel</packagereq>
+      <packagereq type="default">Django</packagereq>
+      <packagereq type="default">Python27-mod_wsgi</packagereq>
+      <packagereq type="default">psycopg2</packagereq>
+      <packagereq type="default">nodejs</packagereq>
+      <packagereq type="default">thrift</packagereq>
+      <packagereq type="default">maven2</packagereq>
+      <packagereq type="default">Sqlite</packagereq>
+      <packagereq type="default">Sqlite-devel</packagereq>
+      <packagereq type="default">zeromq</packagereq>
+      <packagereq type="default">zeromq-devel</packagereq>
+      <packagereq type="default">mongrel2</packagereq>
+      <packagereq type="default">cfengine-community</packagereq>
+    </packagelist>
+  </group>        
+  <category>
+   <id>30and30</id>
+   <name>30and30 </name>
+   <description>30and30 Software</description>
+    <grouplist>
+     <groupid>30and30</groupid>
+    </grouplist>
+  </category>
+</comps>

@@ -22,6 +22,9 @@
       <packagereq type="default">zeromq-devel</packagereq>
       <packagereq type="default">mongrel2</packagereq>
       <packagereq type="default">cfengine-community</packagereq>
+      <packagereq type="default">zookeeper</packagereq>
+      <packagereq type="default">zookeeper-devel</packagereq>
+      <packagereq type="default">zookeeper-python-devel</packagereq>
     </packagelist>
   </group>        
   <category>

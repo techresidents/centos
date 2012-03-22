@@ -2,7 +2,6 @@
 %define version 0.6.8
 %define release 1
 %define prefix /opt/3ps
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 
 Summary: Event-driven I/O server-side JavaScript environment based on V8.
 Name: %{name}

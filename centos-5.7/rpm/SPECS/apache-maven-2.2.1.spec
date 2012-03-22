@@ -1,7 +1,6 @@
 %define version 2.2.1
 %define release 1
 %define prefix /opt/3ps/app
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 
 Name:           maven2
 License:        Apache License v2.0

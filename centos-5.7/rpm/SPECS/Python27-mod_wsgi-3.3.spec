@@ -1,4 +1,3 @@
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 Summary: Python27-mod_wsgi-3.3
 Name: Python27-mod_wsgi
 Release: 1

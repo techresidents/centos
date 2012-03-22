@@ -1,4 +1,3 @@
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 %define _prefix /opt/3ps
 
 Name:          mongrel2

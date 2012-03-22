@@ -1,7 +1,6 @@
 %define version 0.6.0
 %define release 1
 %define prefix /opt/3ps
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 
 Name:           thrift
 License:        Apache License v2.0

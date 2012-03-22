@@ -40,7 +40,6 @@
 #################################
 # End of user-modifiable configs
 #################################
-%define _topdir /opt/30and30/centos/centos-5.7/rpm
 
 %define name python27
 #--start constants--

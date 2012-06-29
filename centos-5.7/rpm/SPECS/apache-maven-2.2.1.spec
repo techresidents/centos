@@ -8,8 +8,8 @@ Summary:        Software project management and comprehension tool
 Version:        %{version}
 Release:        %{release}
 Source0:        apache-maven-%{version}-bin.tar.gz
-Group:          30and30
-Packager:       30and30
+Group:          tr
+Packager:       Tech Residents
 BuildRoot:      %{_topdir}/tmp/%{name}-%{version}-buildroot
 
 

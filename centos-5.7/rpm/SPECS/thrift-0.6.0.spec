@@ -9,8 +9,8 @@ Version:        %{version}
 Release:        %{release}
 URL:            http://developers.facebook.com/thrift
 Source0:        %{name}-%{version}.tar.gz
-Group: 30and30
-Packager: 30and30
+Group: tr
+Packager: Tech Residents
 BuildRoot: %{_topdir}/tmp/%{name}-%{version}-buildroot
 
 BuildRequires:  gcc >= 3.4.6

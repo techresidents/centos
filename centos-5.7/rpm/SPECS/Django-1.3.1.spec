@@ -9,12 +9,12 @@ Version: %{version}
 Release: %{release}
 Source0: %{name}-%{unmangled_version}.tar.gz
 License: UNKNOWN
-Group: 30and30
+Group: tr
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 BuildArch: noarch
 Vendor: Django Software Foundation <foundation@djangoproject.com>
-Packager: 30and30
+Packager: Tech Residents
 Url: http://www.djangoproject.com/
 
 %description

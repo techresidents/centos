@@ -4,8 +4,8 @@ Name:          mongrel2
 Version:       1.7.5
 Release:       1
 Summary:       Mongrel2
-Packager:      30and30
-Group:         30and30
+Packager:      Tech Residents
+Group:         tr
 License:       Mongrel2
 Source:        mongrel2-%{version}.tar.bz2
 Prefix:        %{_prefix}

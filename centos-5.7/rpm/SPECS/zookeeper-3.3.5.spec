@@ -10,8 +10,8 @@ Version:        %{version}
 Release:        %{release}
 URL:            http://zookeeper.apache.org
 Source0:        %{name}-%{version}.tar.gz
-Group: 30and30
-Packager: 30and30
+Group: tr
+Packager: Tech Residents
 BuildRoot: %{_topdir}/tmp/%{name}-%{version}-buildroot
 
 %description
@@ -61,7 +61,7 @@ python src/python/setup.py install --install-lib %{buildroot}%{python_sitearch}
 
 %package devel
 Summary: C headers and static libraries for zookeeper.
-Group: 30and30
+Group: tr
 Requires: gcc
 
 %description devel
@@ -76,7 +76,7 @@ C headers and static libraries for zookeeper.
 
 %package python-devel
 Summary: Python development libraries for zookeeper.
-Group: 30and30
+Group: tr
 Requires: python, zookeeper
 
 %description python-devel

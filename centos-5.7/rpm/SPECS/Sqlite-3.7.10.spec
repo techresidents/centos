@@ -10,8 +10,8 @@ Name: Sqlite
 Version: 3.7.10
 Release: 0
 License: Public Domain
-Packager: 30and30
-Group: 	30and30
+Packager: Tech Residents
+Group: 	tr
 URL: http://www.sqlite.org/
 Source: sqlite-autoconf-3071000.tar.gz
 Obsoletes: sqlite3 sqlite3-devel

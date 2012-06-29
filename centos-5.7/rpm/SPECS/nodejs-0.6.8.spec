@@ -10,8 +10,8 @@ Version: %{version}
 Source: node-v%{version}.tar.gz
 
 BuildRoot: %{_topdir}/tmp/%{name}-%{version}-buildroot
-Group: 30and30
-Packager: 30and30
+Group: tr
+Packager: Tech Residents
 License: nodejs
 
 %description 

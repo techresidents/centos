@@ -4,8 +4,8 @@ Name:          zeromq
 Version:       2.1.11
 Release:       1%{?dist}
 Summary:       The ZeroMQ messaging library
-Packager:      30and30
-Group:         30and30
+Packager:      Tech Residents
+Group:         tr
 License:       LGPLv3+
 URL:           http://www.zeromq.org/
 Source:        http://download.zeromq.org/%{name}-%{version}.tar.gz

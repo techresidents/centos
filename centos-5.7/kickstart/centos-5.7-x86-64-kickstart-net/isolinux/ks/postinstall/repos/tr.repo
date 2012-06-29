@@ -1,0 +1,7 @@
+# tr.repo
+[tr]
+name=tr
+baseurl=http://dev.techresidents.com/CentOS/5.7/x86_64/repo
+gpgcheck=0
+enabled=1
+priority=1

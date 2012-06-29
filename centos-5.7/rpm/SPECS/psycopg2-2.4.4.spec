@@ -9,11 +9,11 @@ Version: %{version}
 Release: %{release}
 Source0: %{name}-%{unmangled_version}.tar.gz
 License: GPL with exceptions or ZPL
-Group: 30and30
+Group: tr
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Prefix: %{_prefix}
 Vendor: Federico Di Gregorio <fog@initd.org>
-Packager: 30and30
+Packager: Tech Residents
 Url: http://initd.org/psycopg/
 
 %description

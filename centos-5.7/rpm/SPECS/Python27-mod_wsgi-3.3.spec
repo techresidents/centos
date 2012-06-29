@@ -10,8 +10,8 @@ Version: 3.3
 Source: Python27-mod_wsgi-3.3.tar.gz
 
 BuildRoot: %{_topdir}/tmp/%{name}-%{version}-buildroot
-Group: 30and30
-Packager: 30and30
+Group: tr
+Packager: Tech Residents
 License: Apache License 2.0
 AutoReqProv: no
 

@@ -10,8 +10,8 @@ POSTGRES_BIN="/usr/pgsql-9.1/bin"
 mkdir -p /opt/3ps/etc
 cp $POSTINSTALL_DIR/opt/3ps/etc/profile /opt/3ps/etc
 
-mkdir -p /opt/tr/etc
-cp $POSTINSTALL_DIR/opt/tr/etc/profile /opt/tr/etc
+mkdir -p /opt/30and30/etc
+cp $POSTINSTALL_DIR/opt/30and30/etc/profile /opt/30and30/etc
 
 #Install addiontal repos and adjust configuration files
 #Add EPEL
@@ -102,11 +102,11 @@ chkconfig postgresql-9.1 on
 yum -y install git
 yum -y install subversion
 
-#install tr
-yum -y groupinstall tr
+#install 30and30
+yum -y groupinstall 30and30
 
-#configure tr ldconfig
-cp $POSTINSTALL_DIR/etc/ld.so.conf.d/tr.conf /etc/ld.so.conf.d
+#configure 30and30 ldconfig
+cp $POSTINSTALL_DIR/etc/ld.so.conf.d/30and30.conf /etc/ld.so.conf.d
 ldconfig
 
 
@@ -120,7 +120,7 @@ pip install virtualenv
 pip install virtualenvwrapper
 
 #Create baseline python virtualenv for use with mod_wsgi
-virtualenv --no-site-packages /opt/tr/baseline-python2.7
+virtualenv --no-site-packages /opt/30and30/baseline-python2.7
 
 #Configure apache
 yum -y install mod_ssl

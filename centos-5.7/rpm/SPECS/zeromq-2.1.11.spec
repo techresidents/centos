@@ -77,21 +77,6 @@ This package contains ZeroMQ related development libraries and header files.
 %{__make} check
 %makeinstall
 
-# pyzmq requires libraries to be in /lib
-# (and not just /lib64), so for x86_64
-# create symlinks in /lib to libs in /lib64.
-%ifarch x86_64
-mkdir -p %{buildroot}%{prefix}/lib/pkgconfig
-ln -s libzmq.so.1 %{buildroot}%{prefix}/lib/libzmq.so.1
-ln -s libzmq.so.1.0.0 %{buildroot}%{prefix}/lib/libzmq.so.1.0.0
-
-ln -s libzmq.la %{buildroot}%{prefix}/lib/libzmq.la
-ln -s libzmq.a %{buildroot}%{prefix}/lib/libzmq.a
-ln -s pkgconfig/libzmq.pc %{buildroot}%{prefix}/lib/pkgconfig/libzmq.pc
-ln -s libzmq.so %{buildroot}%{prefix}/lib/libzmq.so
-
-%endif
-
 %post
 /sbin/ldconfig
 
@@ -111,11 +96,6 @@ ln -s libzmq.so %{buildroot}%{prefix}/lib/libzmq.so
 %{_libdir}/libzmq.so.1
 %{_libdir}/libzmq.so.1.0.0
 
-%ifarch x86_64
-%{prefix}/lib/libzmq.so.1
-%{prefix}/lib/libzmq.so.1.0.0
-%endif
-
 %{_mandir}/man7/zmq.7.gz
 
 %files devel
@@ -128,13 +108,6 @@ ln -s libzmq.so %{buildroot}%{prefix}/lib/libzmq.so
 %{_libdir}/libzmq.a
 %{_libdir}/pkgconfig/libzmq.pc
 %{_libdir}/libzmq.so
-
-%ifarch x86_64
-%{prefix}/lib/libzmq.la
-%{prefix}/lib/libzmq.a
-%{prefix}/lib/pkgconfig/libzmq.pc
-%{prefix}/lib/libzmq.so
-%endif
 
 %{_mandir}/man3/zmq_bind.3.gz
 %{_mandir}/man3/zmq_close.3.gz

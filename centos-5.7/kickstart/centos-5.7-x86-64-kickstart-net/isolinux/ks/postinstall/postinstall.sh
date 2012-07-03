@@ -2,6 +2,9 @@
 
 POSTINSTALL_DIR="/root/postinstall"
 
+#Sync time and date
+/sbin/ntpdate
+
 #Install Tech Residents repo
 cp $POSTINSTALL_DIR/repos/*.repo /etc/yum.repos.d
 

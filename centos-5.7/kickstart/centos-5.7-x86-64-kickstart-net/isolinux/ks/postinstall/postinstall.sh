@@ -3,7 +3,9 @@
 POSTINSTALL_DIR="/root/postinstall"
 
 #Sync time and date
-/sbin/ntpdate
+/sbin/chkconfig ntpd on
+/sbin/ntpdate pool.ntp.org
+/sbin/service ntpd start
 
 #Install Tech Residents repo
 cp $POSTINSTALL_DIR/repos/*.repo /etc/yum.repos.d

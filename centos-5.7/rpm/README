@@ -1,0 +1,3 @@
+To create or update Yum repo from repo/comps.xml, run the following from this directory:
+
+$ createrepo -g comps.xml repo

@@ -54,12 +54,12 @@ BuildRequires: zlib-devel
 %{!?_without_speex:Requires: speex >= 1.2rc1}
 %{!?_without_texi2html:BuildRequires: texi2html}
 %{!?_without_texi2html:Requires: texi2html}
-%{!?_without_theora:BuildRequires: libogg-devel >= 1.3.0, libtheora-devel >= 1.1.1}
-%{!?_without_theora:Requires: libogg >= 1.3.0, libtheora >= 1.1.1}
+%{!?_without_theora:BuildRequires: libogg-devel >= 2:1.3.0, libtheora-devel >= 1.1.1}
+%{!?_without_theora:Requires: libogg >= 2:1.3.0, libtheora >= 1.1.1}
 %{!?_without_vdpau:BuildRequires: libvdpau-devel}
 %{!?_without_vdpau:Requires: libvdpau}
-%{!?_without_vorbis:BuildRequires: libogg-devel >= 1.3.0, libvorbis-devel >= 1.3.3}
-%{!?_without_vorbis:Requires: libogg >= 1.3.0, libvorbis >= 1.3.3}
+%{!?_without_vorbis:BuildRequires: libogg-devel >= 2:1.3.0, libvorbis-devel >= 1:1.3.3}
+%{!?_without_vorbis:Requires: libogg >= 2:1.3.0, libvorbis >= 1:1.3.3}
 %{!?_without_vpx:BuildRequires: libvpx-devel}
 %{!?_without_vpx:Requires: libvpx}
 %{!?_without_x264:BuildRequires: x264-devel}
@@ -95,6 +95,7 @@ Requires: imlib2-devel, SDL-devel, freetype-devel, zlib-devel, pkgconfig
 %{!?_without_openjpeg:Requires: openjpeg-devel}
 %{!?_without_rtmp:Requires: librtmp-devel}
 %{!?_without_schroedinger:Requires: schroedinger-devel}
+%{!?_without_speex:Requires: speex-devel}
 %{!?_without_theora:Requires: libogg-devel, libtheora-devel}
 %{!?_without_vorbis:Requires: libogg-devel, libvorbis-devel}
 %{!?_without_vpx:Requires: libvpx-devel}

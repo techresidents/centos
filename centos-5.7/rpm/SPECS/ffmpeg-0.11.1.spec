@@ -23,6 +23,7 @@ URL: http://ffmpeg.org/
 Source: ffmpeg-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-root
 
+BuildRequires: yasm
 BuildRequires: SDL-devel
 BuildRequires: zlib-devel
 %{!?_without_a52dec:BuildRequires: a52dec-devel}
@@ -49,14 +50,16 @@ BuildRequires: zlib-devel
 %{!?_without_rtmp:Requires: librtmp}
 %{!?_without_schroedinger:BuildRequires: schroedinger-devel}
 %{!?_without_schroedinger:Requires: schroedinger}
+%{!?_without_speex:BuildRequires: speex-devel >= 1.2rc1}
+%{!?_without_speex:Requires: speex >= 1.2rc1}
 %{!?_without_texi2html:BuildRequires: texi2html}
 %{!?_without_texi2html:Requires: texi2html}
-%{!?_without_theora:BuildRequires: libogg-devel, libtheora-devel}
-%{!?_without_theora:Requires: libogg, libtheora}
+%{!?_without_theora:BuildRequires: libogg-devel >= 1.3.0, libtheora-devel >= 1.1.1}
+%{!?_without_theora:Requires: libogg >= 1.3.0, libtheora >= 1.1.1}
 %{!?_without_vdpau:BuildRequires: libvdpau-devel}
 %{!?_without_vdpau:Requires: libvdpau}
-%{!?_without_vorbis:BuildRequires: libogg-devel, libvorbis-devel}
-%{!?_without_vorbis:Requires: libogg, libvorbis}
+%{!?_without_vorbis:BuildRequires: libogg-devel >= 1.3.0, libvorbis-devel >= 1.3.3}
+%{!?_without_vorbis:Requires: libogg >= 1.3.0, libvorbis >= 1.3.3}
 %{!?_without_vpx:BuildRequires: libvpx-devel}
 %{!?_without_vpx:Requires: libvpx}
 %{!?_without_x264:BuildRequires: x264-devel}

@@ -1,0 +1,73 @@
+%define _prefix /opt/3ps
+
+Name:		libtheora
+Version:	1.1.1
+Release:	1
+Summary:	The Theora Video Compression Codec.
+Packager:       Tech Residents
+Group:		tr
+License:	BSD
+URL:		http://www.theora.org/
+Vendor:		Xiph.org Foundation <team@xiph.org>
+Source:		http://downloads.xiph.org/releases/theora/%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-root
+
+BuildRequires:	libogg-devel >= 2:1.1
+BuildRequires:	libvorbis-devel >= 1:1.0.1
+#BuildRequires:	SDL-devel
+
+# this needs to be explicit since vorbis's .so versioning didn't get bumped
+# when going from 1.0 to 1.0.1
+Requires:       libvorbis >= 1:1.0.1
+
+%description
+Theora is Xiph.Org's first publicly released video codec, intended
+for use within the Ogg's project's Ogg multimedia streaming system.
+Theora is derived directly from On2's VP3 codec; Currently the two are
+nearly identical, varying only in encapsulating decoder tables in the
+bitstream headers, but Theora will make use of this extra freedom
+in the future to improve over what is possible with VP3.
+
+%package devel
+Summary:        Development tools for Theora applications.
+Group:          Development/Libraries
+Requires:       %{name} = %{version}-%{release}
+Requires:       libogg-devel >= 2:1.1
+
+%description devel
+The libtheora-devel package contains the header files and documentation
+needed to develop applications with Ogg Theora.
+
+%prep
+%setup -q -n %{name}-%{version}
+
+%build
+%configure --enable-shared
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+# make sure our temp doc build dir is removed
+rm -rf $(pwd)/__docs
+
+%makeinstall docdir=$(pwd)/__docs
+
+find $RPM_BUILD_ROOT -type f -name "*.la" -exec rm -f {} ';'
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
+
+%files
+%defattr(-,root,root)
+%doc COPYING README
+%{_libdir}
+
+%files devel
+%defattr(-,root,root,-)
+%doc __docs/*
+%{_libdir}
+%{_includedir}

@@ -1,7 +1,7 @@
 %define _prefix /opt/3ps
 
 Summary: General purpose sound file conversion tool
-Name: sox
+Name: Sox
 Version: 14.3.2
 Release: 1
 License: GPLv2+ and LGPLv2+
@@ -38,7 +38,7 @@ documentation for %{name}. If you like to develop programs using %{name},
 you will need to install %{name}-devel.
 
 %prep
-%setup
+%setup -q -n sox-%{version}
 
 %build
 export CFLAGS="%{optflags} -I%{_includedir}" 
@@ -76,7 +76,7 @@ export LDFLAGS="-L%{_libdir}"
 %{_libdir}/libsox.so.*
 %dir %{_libdir}/sox/
 
-%files -n sox-devel
+%files -n Sox-devel
 %defattr(-, root, root, 0755)
 %doc %{_mandir}/man3/libsox.3*
 %{_includedir}/sox/
